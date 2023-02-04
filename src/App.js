@@ -8,6 +8,3 @@ export default function App() {
     </div>
   );
 }
-
-// authentication: reqres.in
-//

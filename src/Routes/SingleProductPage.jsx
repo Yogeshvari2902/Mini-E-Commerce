@@ -19,7 +19,6 @@ function SingleProductPage(){
         setData(b.data);
         setLoader(false);
     }
-
     if(loader)
     return <Loader />
     return (

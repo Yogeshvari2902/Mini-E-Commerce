@@ -1,4 +1,3 @@
-// import ProductCard from "./ProductCard"
 import ProductCard from "./ProductCard";
 
 function ProductsTable({data=[]}){

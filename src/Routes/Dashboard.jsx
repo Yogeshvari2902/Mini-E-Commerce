@@ -4,7 +4,6 @@ import ProductsTable from "../Components/ProductsTable";
 import { AuthContext } from "../Context/AuthContext";
 
 function Dashboard() {
-
   const {userAuth,loggedout}=useContext(AuthContext);
   const [data,setData]=useState([]);
   const [loader,setLoader]=useState(true);
@@ -36,7 +35,7 @@ function Dashboard() {
         </p>
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        {/* Products table */
+        {
       <ProductsTable data={data} />
         }
       </div>

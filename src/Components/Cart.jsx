@@ -1,10 +1,8 @@
 import React, { useContext } from 'react';
-import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthContext';
 import Loader from './Loader';
-
 
 function Cart() {
 const {userAuth,addmorequnatity,removequnatity}=useContext(AuthContext);
@@ -29,11 +27,8 @@ const [total,setTotal]=useState(0);
 
             <h1>Total price {userAuth.total}</h1>
             <Link to="/order">Place Order</Link>
-          </>
-            
-            
-            :<Loader />}
-            
+          </>            
+            :<Loader />}            
         </div>
     );
 }

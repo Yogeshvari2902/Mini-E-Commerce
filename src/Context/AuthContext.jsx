@@ -1,9 +1,6 @@
 import { createContext, useState } from "react";
 
- 
-
 export const AuthContext=createContext();
-
 function AuthContextProvider({children}) {
 const [userAuth,setUserAuth]=useState({
     isAuth:false,
@@ -17,7 +14,6 @@ const loggedin=(va)=>{
 
 const loggedout=()=>{
     setUserAuth({ isAuth:false,token:""});
-
 }
 
 function addToCart(data){
@@ -31,41 +27,25 @@ function addToCart(data){
 
 function total(){
 userAuth.map()
-
 }
 
-
 function addmorequnatity(ith){
-
-    // let q=userAuth.cart[i].quantity+1;
-    // console.log(userAuth.cart[ith].quantity++);
-    // console.log(userAuth);
     let z=userAuth.cart[ith].quantity++;
     let arr=userAuth.cart.filter((el,i)=>{
         return i===ith?{...el,quantity:z}:el;
     })
 console.log(arr[ith].quantity);
     setUserAuth({...userAuth,cart:arr})
-
 }
 
-
-
 function removequnatity(ith){
-
-    // let q=userAuth.cart[i].quantity+1;
-    // console.log(userAuth.cart[ith].quantity++);
-    // console.log(userAuth);
     let z=userAuth.cart[ith].quantity--;
     let arr=userAuth.cart.filter((el,i)=>{
         return i===ith?{...el,quantity:z}:el;
     })
 console.log(arr[ith].quantity);
     setUserAuth({...userAuth,cart:arr})
-
 }
-
-
 
 return <AuthContext.Provider value={{userAuth,loggedin,loggedout,addToCart,addmorequnatity,removequnatity}}>
 {children}

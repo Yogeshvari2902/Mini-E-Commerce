@@ -6,7 +6,6 @@ function Login() {
 const [user,setUser]=useState({email:"",password:""})
 const {userAuth,loggedin}=useContext(AuthContext);
 
-
 const handle=async(e)=>{
   e.preventDefault();
  let a= await fetch(`https://reqres.in/api/login`,{
@@ -25,7 +24,6 @@ loggedin(b.token);
 
 if(userAuth.isAuth)
 return <Navigate to="/dashboard" />
-
   return (
     <div>
       <form data-testid="login-form">
